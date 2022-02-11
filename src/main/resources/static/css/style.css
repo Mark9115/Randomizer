@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    font-family: Verdana, serif;
+    font-size: 14px;
+    background-image: url("../img/lowpoly.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.container div {
+    width: 30%;
+    padding: 15px;
+    background: rgba(240, 248, 255, 0.5);
+    border-radius: 10px;
+}
+.container div form{
+    padding: 15px;
+}
+
+table{
+    margin: 0 auto;
+    border-spacing:7px 11px;
+}
+td{
+    width: 20%;
+    text-align:center;
+}
+
+.container div form p{
+
+}
+
+input[type=submit] {
+    width: 100%;
+    text-align: center;
+    padding:5px 15px;
+    background:#ccc;
+    border:0 none;
+    cursor:pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+input[type=file]{
+    padding:30px;
+}
+
+#congratulations{
+    padding-bottom: 20px;
+    padding-top: 20px;
+}

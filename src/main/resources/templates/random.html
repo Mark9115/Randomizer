@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" lang="ru">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Random</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <form action="#" th:action="@{/random/}" th:object="${bothRatings}" method="post">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th>Оценка</th>
+                    </tr>
+                    <tr>
+                        <td>Спрашивает:</td>
+                        <td><span th:text="${firstStudentName}"></span></td>
+                        <td><input type="text" th:field="*{firstRating}" th:id="${firstStudentId}" th:name="${firstStudentId}"/></td>
+                    </tr>
+                    <tr>
+                        <td>Отвечает:</td>
+                        <td><span th:text="${secondStudentName}"></span></td>
+                        <td><input type="text" th:field="*{secondRating}" th:id="${secondStudentName}" th:name="${secondStudentId}"/></td>
+                    </tr>
+                </table>
+                <p><input type="submit" value=" Продолжить "></p>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
