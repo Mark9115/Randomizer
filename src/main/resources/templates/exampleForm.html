@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Random</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<div class="container">
+    <div>
+        <form action="#" th:action="@{/example}" th:object="${rating}">
+            <p><label>Message: <input type="text" th:field="*{record}" /></label></p>
+            <p><input type="submit" value=" Продолжить "></p>
+        </form>
+    </div>
+</div>
+</body>
+</html>

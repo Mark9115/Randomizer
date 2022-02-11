@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Рандомайзер</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+    </head>
+    <body>
+        <div class="container">
+            <div>
+                <table th:if="${students}">
+                    <tr>
+                        <th>Id</th>
+                        <th>Имя</th>
+                        <th>Id группы</th>
+                        <th>Удалить?</th>
+                    </tr>
+                    <tr th:each="student : ${students}">
+                        <td th:text="${student.id}"></td>
+                        <td th:text="${student.name}"></td>
+                        <td th:text="${student.groupId}"></td>
+                        <td><a th:href="@{ '/delete/'+ ${student.id}}">ткни</a></td>
+                    </tr>
+                </table>
+                <form action="/random/" METHOD="post">
+                    <p><input type="submit" value="Рандомайз"></p>
+                </form>
+                <a th:href="@{/uploadOneFile}">Загрузить файл для парсинга</a>
+            </div>
+        </div>
+    </body>
+</html>
